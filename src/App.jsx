@@ -7,14 +7,15 @@ function App() {
   return (
     <div>
       <Routes>
+        <Route path="/" element={<HomePage />} />
         
-        <Route path="/" element={<HomePage />} />  {/* Home Route */}
-        
-        <Route path="/login" element={<Login />} /> {/* Login Route */}
+        <Route path="/login" element={<Login />} />
 
-        <Route path="/signup" element={<Signup />} /> {/* Signup Route */}
+        <Route path="/signup" element={<Signup />} />
 
-        <Route path="*" element={<div>Page not found</div>} />         {/* Error Route */}
+        <Route path="/:category" element={<HomePage />}/>
+       
+        <Route path="*" element={<div>Page not found</div>} />
       </Routes>
     </div>
   );

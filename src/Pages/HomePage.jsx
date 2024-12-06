@@ -1,4 +1,3 @@
-// src/pages/HomePage.js
 import React from 'react';
 import Navbar from '../Component/Common/navbar';
 import HeroSection from '../Component/HomePage/HeroSection';

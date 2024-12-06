@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate,Link } from "react-router-dom";
-import '../../styles/Navbar.css';
+import {useNavigate, Link } from "react-router-dom";
+import '../../styles/Navbar.css'; 
 
 function Navbar() {
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ function Navbar() {
           <Link to="/entertainment">Entertainment</Link>
         </li>
       </ul>
-      <button className="logout-button" onClick={()=>navigate('/login')}>
+      <button className="logout-button" onClick={()=>{navigate('/login')}}>
         Logout
       </button>
     </nav>

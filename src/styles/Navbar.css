@@ -1,14 +1,17 @@
-/* Navbar Container */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .navbar {
-  background-color: #1f2937; /* Dark slate gray for a modern look */
+  background-color: #1f2937;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between; /* Space out the links and logout button */
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation Links */
 .navbar-links {
   display: flex;
   list-style: none;
@@ -22,35 +25,33 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: #e5e7eb; /* Light gray for text */
+  color: #e5e7eb;
   font-weight: 600;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #38bdf8; /* Vibrant sky blue for hover effect */
+  color: #38bdf8;
 }
 
-/* Logout Button */
 .logout-button {
-  background-color: #2563eb; /* Strong blue */
+  background-color: #2563eb;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 5px; /* Smooth rounded edges */
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .logout-button:hover {
-  background-color: #1e40af; /* Darker blue on hover */
-  transform: scale(1.05); /* Slight scale-up for interaction feedback */
+  background-color: #1e40af;
+  transform: scale(1.05);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
