@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/HeroSection.css"; 
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const { category = "general" } = useParams();
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,7 +14,13 @@ const Home = () => {
   const API_KEY = import.meta.env.VITE_API_KEY; 
   const API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}&page=${page}&pageSize=5`;
 
-
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("auth");
+    if (!isLoggedIn) {
+      navigate("/login"); 
+    }
+  }, [navigate]);
+  
 
   useEffect(() => {
     setPage(1);
