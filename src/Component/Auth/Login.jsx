@@ -43,7 +43,6 @@ const Login = () => {
             <div className="form-group">
               <label htmlFor="email">Email Address</label>
               <div className="input-wrapper">
-                <i className="icon-email"></i>
                 <input
                   type="email"
                   id="email"
@@ -58,7 +57,6 @@ const Login = () => {
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <div className="input-wrapper">
-                <i className="icon-lock"></i>
                 <input
                   type={isPasswordVisible ? "text" : "password"}
                   id="password"
@@ -79,7 +77,6 @@ const Login = () => {
 
             {error && (
               <div className="error-message">
-                <i className="icon-alert"></i>
                 {error}
               </div>
             )}

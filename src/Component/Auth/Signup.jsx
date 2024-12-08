@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../styles/Login.css"; 
+import "../../styles/Login.css";
 
-const Register = () => {
+const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -10,11 +10,20 @@ const Register = () => {
   const [isPasswordVisible,setIsPasswordVisible]=useState(false)
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleSignup = (e) => {
     e.preventDefault();
 
+    
     if (!name || !email || !password) {
       setError("All fields are required.");
+      return;
+    }
+    
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (storedUser && storedUser.email === email) {
+      alert("This email is already registered. Please login.");
+      navigate("/login");
       return;
     }
 
@@ -38,7 +47,7 @@ const Register = () => {
             <p>Create a new account to get started</p>
           </div>
 
-          <form onSubmit={handleRegister} className="login-form">
+          <form onSubmit={handleSignup} className="login-form">
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <div className="input-wrapper">
@@ -70,7 +79,6 @@ const Register = () => {
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <div className="input-wrapper">
-              <i className="icon-lock"></i>
                 <input
                   type={isPasswordVisible ? "text" : "password"}
                   id="password"
@@ -91,7 +99,6 @@ const Register = () => {
 
             {error && (
               <div className="error-message">
-                <i className="icon-alert"></i>
                 {error}
               </div>
             )}
@@ -102,7 +109,7 @@ const Register = () => {
 
             <div className="signup-link">
               <p>
-                Already have an account?{" "}
+                Already have an account?
                 <button
                   onClick={() => navigate("/login")}
                   className="signup-text"
@@ -118,4 +125,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Signup;

@@ -38,7 +38,7 @@ function Navbar() {
       </div>
 
       <ul className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
-        {navLinks.map((link) => (
+        {navLinks.map((link) => ( 
           <li key={link.path}>
             <Link 
               to={link.path} 
@@ -51,12 +51,11 @@ function Navbar() {
         ))}
      
      {/* mobile view logout button */}
-        <button 
-          className="logout-button" id="logout-mv"
+        <li id="logout-mv"
           onClick={handleLogout}
         >
           Logout
-        </button>
+        </li>
       </ul>
 
       {/* desktop view logout button */}

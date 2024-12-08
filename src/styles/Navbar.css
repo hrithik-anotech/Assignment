@@ -137,6 +137,7 @@ body {
     display: none;
     flex-direction: column;
     width: 40%;
+    height: 100vh;
     gap: 0.3rem;
     position: absolute;
     top: 100%;
@@ -151,7 +152,7 @@ body {
 
   .navbar-links li {
     text-align: center;
-    padding: 1rem 0;
+    padding: 0.1rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -170,7 +171,7 @@ body {
   }
 
   .logout-button {
-    width: 100%;
+    width: 50%;
     justify-content: center;
   }
 
@@ -180,5 +181,6 @@ body {
 
   #logout-mv {
     display: block;
+    padding: 0.76rem;
   }
 }

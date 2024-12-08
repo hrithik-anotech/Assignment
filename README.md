@@ -1,18 +1,33 @@
 # NewsApp
 
-1. Clone the repository to your local machine.
-    ```sh
-    https://github.com/hrithik-anotech/Assignment.git
-    ```
+## Setup Instructions
 
-1. Install the required packages.
+1. **Clone the repository**  
+   Clone the repository to your local machine using the following command:
+   ```sh
+   git clone https://github.com/hrithik-anotech/Assignment.git
+
+
+2. Install the required packages.
     ```sh
-    cd NewsApp
+    cd Assignment
     npm install
     ```
 
-1. Start the development server.
+3. Start the development server.
     ```sh
     npm run dev
     ```
-1. Open the project in your browser at [`http://localhost:5175`](http://localhost:5175) to view your project.
+
+1. Open the project in your browser at [`http://localhost:PORT`](http://localhost:PORT) to view your project.
+
+
+Issue While Hosting
+When trying to host the website, an error occurred with the API. 
+Below is a screenshot of the problem encountered:
+
+![Problem Screenshot](./src/assets/home.png)
+
+Video Demonstration
+demonstrates the project working correctly on localhost
+Watch the project demonstration on [YouTube](https://youtu.be/xAX5-nj53uQ?si=Ffsgp2UbKhoVwiqw).

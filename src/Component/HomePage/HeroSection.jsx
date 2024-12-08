@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../styles/HeroSection.css"; 
 import axios from "axios";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,15 +12,15 @@ const Home = () => {
   const [page, setPage] = useState(1);
 
   const API_KEY = import.meta.env.VITE_API_KEY; 
-  const API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}&page=${page}&pageSize=5`;
+const API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}&page=${page}&pageSize=5`;
 
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("auth");
-    if (!isLoggedIn) {
-      navigate("/login"); 
-    }
-  }, [navigate]);
-  
+
+useEffect(() => {
+  const isLoggedIn = localStorage.getItem("auth");
+  if (!isLoggedIn) {
+    navigate("/login"); 
+  }
+}, [navigate]);
 
   useEffect(() => {
     setPage(1);
@@ -36,7 +36,7 @@ const Home = () => {
       setLoading(true);
       const response = await axios.get(API_URL);
       setArticles(response.data.articles);
-      setError("");
+      setError(""); // Clear previous errors
     } catch (error) {
       setError(error.response?.data?.message || "Failed to fetch news articles.");
     } finally {
