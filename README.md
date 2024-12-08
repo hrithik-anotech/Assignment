@@ -21,6 +21,7 @@
 
 1. Open the project in your browser at [`http://localhost:PORT`](http://localhost:PORT) to view your project.
 
+2. the project is hosted on [`https://newsapp-s18.netlify.app/`](https://newsapp-s18.netlify.app/)
 
 Issue While Hosting
 When trying to host the website, an error occurred with the API. 
