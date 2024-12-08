@@ -1,14 +1,4 @@
 
-:root {
-  --primary-color: #2563eb;      
-  --secondary-color: #6366f1;      
-  --background-light: #f8fafc;     
-  --text-primary: #1f2937;         
-  --text-secondary: #4b5563;       
-  --border-color: #e5e7eb;        
-  --accent-color: #10b981;       
-  --error-color: #ef4444;         
-}
 
 * {
   margin: 0;
@@ -19,8 +9,8 @@
 body {
   font-family: 'Inter', 'Segoe UI', Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
-  background-color: var(--background-light);
-  color: var(--text-primary);
+  background-color: #f8fafc;
+  color: #1f2937;
 }
 
 .container {
@@ -49,7 +39,7 @@ body {
 .article {
   display: flex;
   background-color: white;
-  border: 1px solid var(--border-color);
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -85,7 +75,7 @@ body {
 .title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: #2563eb;
   margin-bottom: 10px;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -97,19 +87,19 @@ body {
 }
 
 .title a:hover {
-  color: var(--secondary-color);
+  color: #6366f1;
 }
 
 .description {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: #4b5563;
   margin-bottom: 15px;
   line-height: 1.6;
 }
 
 .source {
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: #4b5563;
   opacity: 0.8;
 }
 
@@ -124,7 +114,7 @@ body {
 
 .button {
   padding: 12px 25px;
-  background-color: var(--primary-color);
+  background-color: #2563eb;
   color: white;
   border: none;
   border-radius: 8px;
@@ -136,14 +126,14 @@ body {
 }
 
 .button:hover:not(:disabled) {
-  background-color: var(--secondary-color);
+  background-color: #6366f1;
   transform: translateY(-2px);
   box-shadow: 0 7px 20px rgba(37, 99, 235, 0.3);
 }
 
 .button:disabled {
-  background-color: var(--border-color);
-  color: var(--text-secondary);
+  background-color: #e5e7eb;
+  color: #4b5563;
   cursor: not-allowed;
   box-shadow: none;
 }
@@ -151,19 +141,19 @@ body {
 .pageIndicator {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #1f2937;
 }
 
 
 .message {
   text-align: center;
-  color: var(--text-secondary);
+  color: #4b5563;
   font-size: 1rem;
   padding: 20px;
 }
 
 .error {
-  color: var(--error-color);
+  color: #ef4444;
   font-weight: 700;
   background-color: rgba(239, 68, 68, 0.05);
   border: 1px solid rgba(239, 68, 68, 0.2);
