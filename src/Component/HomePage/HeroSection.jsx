@@ -12,7 +12,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
 
   const API_KEY = import.meta.env.VITE_API_KEY; 
-const API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}&page=${page}&pageSize=5`;
+const API_URL = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}&page=${page}&pageSize=10`;
 
 
 useEffect(() => {
@@ -67,7 +67,7 @@ useEffect(() => {
             )}
             <div className="content">
               <h2 className="title">
-                <a href={article.url} target="_blank" rel="noopener noreferrer">
+                <a href={article.url} target="_blank">
                   {article.title}
                 </a>
               </h2>
